@@ -43,8 +43,8 @@ class TestArticle:
         assert 5 <= len(article_1.title) <= 50
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     Article(author, magazine, "Test")
+        with pytest.raises(Exception):
+            Article(author, magazine, "Test")
 
         # uncomment the next two lines if using Exceptions
         with pytest.raises(Exception):
