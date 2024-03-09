@@ -70,12 +70,24 @@ class Magazine:
         author_count = {}
         for article in self._articles:
             author_count[article.author] = author_count.get(article.author, 0) + 1
-        return [author for author, count in author_count.items() if count > 2] if self._articles else None
+        return [author for author, count in author_count.items() if count > 2]
+    
+    @classmethod
+    def top_publisher(cls):
+        if not Article.all:
+            return None
+
+        magazine_article_counts = {}
+        for article in Article.all:
+            magazine_article_counts[article.magazine] = magazine_article_counts.get(article.magazine, 0) + 1
+
+        if not magazine_article_counts:
+            return None
+
+        top_magazine = max(magazine_article_counts, key=magazine_article_counts.get)
+        return top_magazine
 
 
-# Article class
-# Article class
-# Article class
 class Article:
     # Class attribute to keep track of all created instances
     all = []
@@ -103,5 +115,4 @@ class Article:
     @property
     def magazine(self):
         return self._magazine
-
 

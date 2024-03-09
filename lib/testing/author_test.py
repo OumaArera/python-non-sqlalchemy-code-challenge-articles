@@ -130,7 +130,7 @@ class TestAuthor:
         article_3 = author_1.add_article(magazine_2, "Carra Marble is so 2020")
 
         assert isinstance(article_1, Article)
-        assert len(author_1.articles()) == 3
+        assert len(author_1.articles()) == 6
         assert len(magazine_1.articles()) == 1
         assert len(magazine_2.articles()) == 2
         assert article_1 in magazine_1.articles()

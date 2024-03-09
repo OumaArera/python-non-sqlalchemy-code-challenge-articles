@@ -31,8 +31,8 @@ class TestArticle:
         assert isinstance(article_1.title, str)
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     Article(author, magazine, 500)
+        with pytest.raises(Exception):
+            Article(author, magazine, 500)
 
     def test_title_is_valid(self):
         """title is between 5 and 50 characters inclusive"""
@@ -47,8 +47,8 @@ class TestArticle:
         #     Article(author, magazine, "Test")
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     Article(author, magazine, "How to wear a tutu with style and walk confidently down the street")
+        with pytest.raises(Exception):
+            Article(author, magazine, "How to wear a tutu with style and walk confidently down the street")
 
     def test_has_an_author(self):
         """article has an author"""
@@ -86,21 +86,6 @@ class TestArticle:
 
         assert article_1.magazine == magazine_1
         assert article_2.magazine == magazine_2
-
-    # def test_magazine_of_type_magazine_and_mutable(self):
-    #     """magazine is of type Magazine and mutable"""
-    #     author = Author("Carry Bradshaw")
-    #     magazine_1 = Magazine("Vogue", "Fashion")
-    #     magazine_2 = Magazine("AD", "Architecture & Design")
-    #     article_1 = Article(author, magazine_1, "How to wear a tutu with style")
-    #     article_2 = Article(author, magazine_2, "Dating life in NYC")
-
-    #     assert isinstance(article_1.magazine, Magazine)
-    #     assert isinstance(article_2.magazine, Magazine)
-        
-    #     article_1.magazine = magazine_2
-    #     assert isinstance(article_1.magazine, Magazine)
-    #     assert article_1.magazine.name == "AD"
         
     def test_magazine_of_type_magazine_and_mutable(self):
         """magazine is of type Magazine and mutable"""
