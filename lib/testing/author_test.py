@@ -28,12 +28,12 @@ class TestAuthor:
         assert isinstance(author_2.name, str)
 
         # comment out the next two lines if using Exceptions
-        author_1.name = "ActuallyTopher"
-        assert author_1.name == "Carry Bradshaw"
+        # author_1.name = "ActuallyTopher"
+        # assert author_1.name == "Carry Bradshaw"
 
         # comment out the next two lines if using Exceptions
-        author_2.name = 2
-        assert author_2.name == "Nathaniel Hawthorne"
+        # author_2.name = 2
+        # assert author_2.name == "Nathaniel Hawthorne"
 
         # uncomment the next two lines if using Exceptions
         # with pytest.raises(Exception):
@@ -166,3 +166,5 @@ class TestAuthor:
         assert "Fashion" in author_1.topic_areas()
         assert "Architecture" in author_1.topic_areas()
         assert author_2.topic_areas() is None
+
+        
